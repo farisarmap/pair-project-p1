@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/user/addPlaylist" method="POST">
+        <p>Name Playlist</p>
+        <input type="text" name="name">
+        <p>List Song</p>
+        <select name="SongId">
+            <% data.forEach(el =>{ %>
+            <option value="<%= el.id %>"><%= el.title %></option>
+            <% }) %> 
+        </select>
+        <button type=" submit">Submit</button>
+    </form>
+</body>
+
+</html>

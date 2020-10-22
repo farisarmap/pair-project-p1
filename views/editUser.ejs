@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/user/edit/<%= data.id %>" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= data.name %>"><br>
+        <label for="age">Age</label>
+        <input type="number" name="age" value="<%= data.age %>"><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" value="<%= data.email %>"><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" value="<%= data.password %>"><br>
+        <button type="submit">Submit</button>
+        <button type="/user">Cancel</button>
+    </form>
+</body>
+</html>

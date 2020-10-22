@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name Playlist</th>
+            <th>List of Song</th>
+            <th>Actions</th>
+        </tr>
+        <% data.forEach(el => { %>
+            <tr>
+                <td><%= el.Playlists[0].name %></td>
+                <% el.forEach(el => { %>
+                    <td><%=el.Song.title %></td>
+                 <% }) %>
+                <td><a href="/user/delete/<%= el.id %>">Delete</a></td>
+            </tr>
+         <% }) %>
+    </table>
+</body>
+</html>

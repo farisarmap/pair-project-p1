@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/user/edit/<%= data.id %>" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= data.name %>"><br>
+        <button type="submit" value="Edit">Update</button>
+        <button><a href="/user/playlist">Cancel</a></button>
+    </form>
+</body>
+</html>
