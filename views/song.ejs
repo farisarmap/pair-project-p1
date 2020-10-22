@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="/user">User</a></button>
+    <button><a href="/user/playlist">Playlist</a></button>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Action</th>
+        </tr>
+        <% data.forEach(el => { %>
+            <tr>
+                <td><%= el.rank %></td>
+                <td><img src="<%= el.cover %>"  width="48" height="48"></td>
+                <td><%= el.title %></td>
+                <td><%= el.artist %></td>
+                <td><a href="/user/addPlaylist/<%= el.id %>">Add to Playlist</a></td>
+            </tr>
+         <% }) %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="/user/addPlaylist">Add Playlist</a></button>
+    <button><a href="/user/register">Register</a></button>
+    <button><a href="/song">List Song</a></button>
+    <button><a href="/user/playlist">Playlist</a></button>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Birth Year</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        <% data.forEach(el => { %>
+            <tr>
+                <td><%= el.name %></td>
+                <td><%= el.age %></td>
+                <td><%= helperAge(el.age) %></td>
+                <td><%= el.email %></td>
+                <td><a href="/user/playlist/<%= el.id %>">See Playlist</a> || <a href="/user/edit/:id">Edit</a></td>
+            </tr>
+         <% }) %> 
+    </table>
+</body>
+</html>

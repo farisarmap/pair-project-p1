@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/user/addPlaylist/<%= dataPlaylist.id %>" method="POST">
+        <p>List of Playlist</p>
+        <select name="name">
+            <% dataPlaylist.forEach(el =>{ %>  
+            <option value="<%= el.name %>"><%= el.name %></option>
+            <% }) %>
+        </select>
+        <p>List of Song</p>
+        <select name="SongId" >
+            <% dataSong.forEach(el => { %>
+                <option value="<%= el.id %>"><%= el.title %></option>
+            <% }) %>
+        </select><br>
+        <button type="submit">Add</button>
+        <button type="/song">Cancel</button>
+    </form>
+</body>
+</html>
